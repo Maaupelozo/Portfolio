@@ -68,7 +68,9 @@ class Navbar {
         });
 
         // Add scroll listener for navbar style
-        window.addEventListener('scroll', throttle(() => this.handleScroll(), 100));
+        window.addEventListener('scroll', () => this.handleScroll());
+        // Call on page load to set initial state
+        this.handleScroll();
     }
 
     toggleMobileMenu() {
@@ -82,7 +84,7 @@ class Navbar {
     }
 
     handleScroll() {
-        if (window.scrollY > 10) {
+        if (window.scrollY > 50) {
             this.navbar.classList.add('scrolled');
         } else {
             this.navbar.classList.remove('scrolled');
@@ -361,11 +363,31 @@ class Performance {
     }
 }
 
+// ==================== Theme Toggle ====================
+
+class ThemeToggle {
+    constructor() {
+        this.button = document.getElementById('themeToggle');
+        this.isDark = true;
+        
+        if (this.button) {
+            this.button.addEventListener('click', () => this.toggle());
+        }
+    }
+
+    toggle() {
+        this.isDark = !this.isDark;
+        // Could be extended to add actual dark/light theme switching
+        // For now, it's just a visual button with hover effect
+    }
+}
+
 // ==================== Initialize App ====================
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
     new Navbar();
+    new ThemeToggle();
     new ScrollToTop();
     new ContactForm();
     new LazyLoad();
