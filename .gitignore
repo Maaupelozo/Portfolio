@@ -1,0 +1,32 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (si alguna vez se agrega)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build/Dist
+dist/
+build/
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Compiladores
+*.css.map
+*.js.map

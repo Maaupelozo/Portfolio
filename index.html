@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio profesional - Desarrollador Full Stack">
+    <meta name="author" content="Tu Nombre">
+    <title>Mi Portfolio | Desarrollador Full Stack</title>
+    
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="#top" class="logo">TuNombre</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#top" class="nav-link">Inicio</a></li>
+                <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#contacto" class="nav-link cta">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hola, soy <span class="highlight">Tu Nombre</span></h1>
+                <p class="hero-subtitle">Desarrollador Full Stack & Especialista en Automatización</p>
+                <p class="hero-description">
+                    Creo soluciones web modernas y procesos automatizados. Con experiencia en React, 
+                    Node.js y herramientas de automatización, transformo ideas en aplicaciones funcionales.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/profile.svg" alt="Tu Nombre" class="profile-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experiencia">
+        <div class="container">
+            <h2 class="section-title">Experiencia Laboral</h2>
+            
+            <div class="experience-grid">
+                <!-- Experience Card 1 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Desarrollador Senior</h3>
+                        <p class="company">Empresa Actual</p>
+                    </div>
+                    <p class="date">Enero 2024 - Presente</p>
+                    <ul class="responsibilities">
+                        <li>Lideré el desarrollo de aplicaciones web escalables</li>
+                        <li>Implementé soluciones de automatización con n8n</li>
+                        <li>Mentoreé a desarrolladores junior en buenas prácticas</li>
+                        <li>Optimicé performance en aplicaciones React</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">n8n</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Desarrollador Full Stack</h3>
+                        <p class="company">Freelancer</p>
+                    </div>
+                    <p class="date">Junio 2023 - Presente</p>
+                    <ul class="responsibilities">
+                        <li>Desarrollé e-commerce y landing pages personalizadas</li>
+                        <li>Implementé sistemas de pago con Stripe</li>
+                        <li>Creé dashboards administrativos</li>
+                        <li>Aseguré diseño responsive en todos los proyectos</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tailwind</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Front-End Developer</h3>
+                        <p class="company">Agencia de Diseño</p>
+                    </div>
+                    <p class="date">Marzo 2022 - Mayo 2023</p>
+                    <ul class="responsibilities">
+                        <li>Convertí diseños Figma en componentes React</li>
+                        <li>Optimicé SEO en proyectos web</li>
+                        <li>Implementé animaciones y transiciones suaves</li>
+                        <li>Trabajé con designers en iteraciones de UX/UI</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Sass</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="proyectos">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/project1.svg" alt="Nombre del Proyecto 1" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://ejemplo1.com" target="_blank" class="btn btn-small">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Tienda Online</h3>
+                        <p class="project-description">
+                            Plataforma de e-commerce completa con carrito de compras, 
+                            sistema de pagos integrado y panel administrativo.
+                        </p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Tailwind</span>
+                            <span>Stripe</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ejemplo1.com" target="_blank" class="link-icon" title="Ver en vivo">🔗</a>
+                            <a href="https://github.com" target="_blank" class="link-icon" title="Ver código">💻</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/project2.svg" alt="Nombre del Proyecto 2" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://ejemplo2.com" target="_blank" class="btn btn-small">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard Administrativo</h3>
+                        <p class="project-description">
+                            Sistema de gestión con gráficos, reportes en tiempo real 
+                            y control de usuarios con autenticación segura.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Chart.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ejemplo2.com" target="_blank" class="link-icon" title="Ver en vivo">🔗</a>
+                            <a href="https://github.com" target="_blank" class="link-icon" title="Ver código">💻</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/project3.svg" alt="Nombre del Proyecto 3" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://ejemplo3.com" target="_blank" class="btn btn-small">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Landing Page Profesional</h3>
+                        <p class="project-description">
+                            Landing page optimizada para conversión con formularios, 
+                            secciones de testimonios y CTA efectivos.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ejemplo3.com" target="_blank" class="link-icon" title="Ver en vivo">🔗</a>
+                            <a href="https://github.com" target="_blank" class="link-icon" title="Ver código">💻</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre-mi">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy un desarrollador Full Stack apasionado por crear experiencias web memorables. 
+                        Con más de 3 años de experiencia, he trabajado en proyectos desde startups hasta empresas establecidas.
+                    </p>
+                    <p>
+                        Mi especialidad es convertir requisitos complejos en soluciones simples y elegantes. 
+                        Trabajo con tecnologías modernas como React, Node.js y especialidades en automatización de procesos.
+                    </p>
+                    <p>
+                        Creo contenido en redes sociales compartiendo mi día a día como programador, 
+                        y estoy siempre aprendiendo nuevas tecnologías para mantenerme actualizado.
+                    </p>
+                    
+                    <div class="skills-section">
+                        <h3>Habilidades Principales</h3>
+                        <div class="skills-grid">
+                            <div class="skill-group">
+                                <h4>Frontend</h4>
+                                <ul>
+                                    <li>React / Next.js</li>
+                                    <li>TypeScript</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>CSS3 / SASS</li>
+                                </ul>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Backend</h4>
+                                <ul>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>PostgreSQL</li>
+                                    <li>MongoDB</li>
+                                </ul>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Herramientas</h4>
+                                <ul>
+                                    <li>Git / GitHub</li>
+                                    <li>n8n Automation</li>
+                                    <li>Figma</li>
+                                    <li>Firebase</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="assets/images/about.svg" alt="Sobre mí" class="about-img" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            
+            <div class="contact-content">
+                <p class="contact-intro">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:tu.email@ejemplo.com" class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p>tu.email@ejemplo.com</p>
+                    </a>
+                    
+                    <a href="https://wa.me/tunumero" target="_blank" class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <h3>WhatsApp</h3>
+                        <p>+54 9 xxxx xxxxxx</p>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/tunombre" target="_blank" class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p>Ver Perfil</p>
+                    </a>
+                    
+                    <a href="https://github.com/tunombre" target="_blank" class="contact-card">
+                        <div class="contact-icon">⚙️</div>
+                        <h3>GitHub</h3>
+                        <p>Ver Proyectos</p>
+                    </a>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Envíame un mensaje</h3>
+                    <form id="contactForm" class="form">
+                        <div class="form-group">
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Tu nombre" 
+                                required
+                                aria-label="Nombre"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="tu@email.com" 
+                                required
+                                aria-label="Email"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Tu mensaje..." 
+                                rows="5" 
+                                required
+                                aria-label="Mensaje"
+                            ></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <p id="formMessage" class="form-message" style="display: none;"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://github.com/tunombre" target="_blank" aria-label="GitHub">GitHub</a>
+                    <a href="https://linkedin.com/in/tunombre" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="https://instagram.com/tunombre" target="_blank" aria-label="Instagram">Instagram</a>
+                    <a href="https://twitter.com/tunombre" target="_blank" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Ir al inicio">↑</button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
