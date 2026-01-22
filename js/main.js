@@ -369,7 +369,7 @@ class ThemeToggle {
     constructor() {
         this.button = document.getElementById('themeToggle');
         this.isDark = true;
-        
+
         if (this.button) {
             this.button.addEventListener('click', () => this.toggle());
         }
@@ -382,12 +382,115 @@ class ThemeToggle {
     }
 }
 
+// ==================== Projects Manager ====================
+
+class ProjectsManager {
+    constructor() {
+        this.container = document.getElementById('projects-container');
+        this.projects = [
+            {
+                title: "Pichus Tandil",
+                description: "Proyecto de e-commerce especializado en la venta de ropa femenina (Proyecto Freelancer).",
+                tags: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
+                image: "assets/images/project1.svg", // Placeholder, user might want to change
+                demoLink: "#",
+                codeLink: null // No code link for freelance/private projects usually
+            },
+            {
+                title: "Coder Market",
+                description: "Proyecto con generación de tickets de compra y un dashboard administrativo para gestionar productos.",
+                tags: ["React", "Firebase", "Sass", "JavaScript"],
+                image: "assets/images/project2.svg",
+                demoLink: "#",
+                codeLink: "#"
+            },
+            {
+                title: "Nos casamos",
+                description: "Página web para una pareja de Tandil, Argentina, creada especialmente para su boda.",
+                tags: ["HTML", "CSS", "JavaScript"],
+                image: "assets/images/project3.svg",
+                demoLink: "#",
+                codeLink: "#"
+            }
+        ];
+
+        this.init();
+    }
+
+    init() {
+        if (this.container) {
+            this.renderProjects();
+        }
+    }
+
+    renderProjects() {
+        const projectsHTML = this.projects.map(project => {
+            /* Code Button removed as per user request */
+            const demoBtn = project.demoLink ? `
+                <a href="${project.demoLink}" target="_blank" class="btn btn-outline-social">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    Preview
+                </a>
+            ` : '';
+
+            // Generate Tags HTML
+            const tagsHTML = project.tags.map(tag => `
+                <span class="tech-badge">
+                    ${this.getTechIcon(tag)}
+                    ${tag}
+                </span>
+            `).join('');
+
+            return `
+                <article class="project-item fade-in">
+                    <div class="project-preview">
+                        <div class="browser-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="preview-image-container">
+                             <img src="${project.image}" alt="${project.title}" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">${project.title}</h3>
+                        <div class="project-tags">
+                            ${tagsHTML}
+                        </div>
+                        <p class="project-desc">
+                            ${project.description}
+                        </p>
+                        <div class="project-actions">
+                            ${demoBtn}
+                        </div>
+                    </div>
+                </article>
+            `;
+        }).join('');
+
+        this.container.innerHTML = projectsHTML;
+    }
+
+    getTechIcon(tech) {
+        // Simple mapping for icons, can be expanded
+        const iconMap = {
+            'Next.js': '<svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v10h-2z"/></svg>', // Placeholder
+            'default': '⚡'
+        };
+        // Return icon if exists, else return empty string or default
+        // For now using simple emoji/text fallback to keep it simple without too many SVGs inline
+        return '';
+    }
+}
+
 // ==================== Initialize App ====================
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
     new Navbar();
     new ThemeToggle();
+    new ProjectsManager();
     new ScrollToTop();
     new ContactForm();
     new LazyLoad();
