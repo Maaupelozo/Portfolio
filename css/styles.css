@@ -796,6 +796,7 @@ section:nth-child(even) {
     transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease);
     transform: none;
     /* Remove default scale */
+    order: 1;
 }
 
 .project-item:hover .project-preview {
@@ -849,6 +850,7 @@ section:nth-child(even) {
     justify-content: flex-start;
     /* Align to top */
     padding-top: var(--space-1);
+    order: 2;
 }
 
 .project-title {
@@ -970,11 +972,11 @@ section:nth-child(even) {
 
 
 /* ==========================================
-   ABOUT SECTION
+   ABOUT SECTION by mauri
    ========================================== */
 
 .about .container {
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 .about-title {
@@ -985,15 +987,8 @@ section:nth-child(even) {
     position: relative;
     padding-bottom: var(--space-4);
     margin-bottom: var(--space-12);
-    /* Alignment Fix */
     font-size: 1.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding-left: var(--space-6);
-    padding-right: var(--space-6);
-    box-sizing: border-box;
+    padding-left: 200px;
 }
 
 .about-title::after {
@@ -1005,8 +1000,7 @@ section:nth-child(even) {
     grid-template-columns: 1.5fr 1fr;
     gap: var(--space-12);
     align-items: start;
-    /* Align text with "Sobre Mí" words (150px layout offset + ~55px icon/gap offset) */
-    padding-left: 205px;
+    padding-left: 200px;
 }
 
 .about-text {
@@ -1019,17 +1013,21 @@ section:nth-child(even) {
     margin-bottom: var(--space-6);
 }
 
+/* ABOUT CARD WRAPPER */
+.about-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
 /* ABOUT CARD */
 .about-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border-subtle);
     border-radius: 20px;
-    padding: var(--space-6);
+    padding: var(--space-3);
     box-shadow: var(--shadow-base);
     transition: all var(--dur-base);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);
 }
 
 .about-card:hover {
@@ -1057,10 +1055,11 @@ section:nth-child(even) {
     transform: scale(1.05);
 }
 
-/* SOCIAL BUTTONS IN CARD */
+/* SOCIAL BUTTONS OUTSIDE CARD */
 .about-socials {
     display: flex;
-    gap: var(--space-4);
+    gap: var(--space-3);
+    margin-top: var(--space-2);
 }
 
 .btn-social-card {
@@ -1069,14 +1068,15 @@ section:nth-child(even) {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 12px;
+    padding: 10px 16px;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
     color: var(--text-primary);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all var(--dur-base);
+    text-decoration: none;
 }
 
 .btn-social-card:hover {
@@ -1094,150 +1094,103 @@ section:nth-child(even) {
         padding-left: 0;
     }
 
-    .about-card {
+    .about-title {
+        padding-left: 0;
+    }
+
+    .about-card-wrapper {
         max-width: 400px;
         margin: 0 auto;
         width: 100%;
     }
+
+    .about-card {
+        width: 100%;
+    }
 }
 
-/* ==========================================
-   CONTACT SECTION
-   ========================================== */
-
-.contact-intro {
-    text-align: center;
-    font-size: 1.25rem;
-    margin-bottom: var(--space-16);
-}
-
-.contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-8);
-    margin-bottom: var(--space-20);
-}
-
-.contact-card {
-    background: var(--bg-card);
-    padding: var(--space-8);
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: all var(--dur-base);
-    border: 1px solid var(--border-subtle);
-}
-
-.contact-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary);
-    box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
-}
-
-.contact-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--space-4);
-}
-
-.contact-card h3 {
-    margin-bottom: var(--space-2);
-    margin-top: 0;
-}
-
-.contact-card p {
-    margin: 0;
-    color: var(--text-secondary);
-}
-
-.contact-form {
-    background: var(--bg-card);
-    padding: var(--space-12);
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid var(--border-subtle);
-}
-
-.contact-form h3 {
-    text-align: center;
-    margin-bottom: var(--space-8);
-    margin-top: 0;
-}
-
-.contact-form .btn {
-    width: 100%;
-}
+/* Contact section removed */
 
 /* ==========================================
    FOOTER
    ========================================== */
 
 .footer {
-    background: var(--bg-card);
-    color: var(--text-primary);
+    background: transparent;
     padding: var(--space-8) 0;
-    border-top: 1px solid var(--border-subtle);
+    border-top: none;
+    font-size: 0.9rem;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-8);
 }
 
-.footer-content p {
+.footer-copyright {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: color var(--dur-base);
     margin: 0;
-    color: var(--text-secondary);
 }
 
-.social-links {
+.footer-copyright:hover {
+    color: var(--primary);
+}
+
+.footer-links {
     display: flex;
     gap: var(--space-6);
 }
 
-.social-links a {
+.footer-links a {
     color: var(--text-secondary);
+    text-decoration: none;
     transition: color var(--dur-base);
 }
 
-.social-links a:hover {
+.footer-links a:hover {
     color: var(--primary);
 }
 
+.social-links {
+    display: none;
+}
+
 /* ==========================================
-   SCROLL TO TOP
+   WHATSAPP BUTTON
    ========================================== */
 
-.scroll-to-top {
+.whatsapp-button {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    width: 60px;
+    height: 60px;
+    background: #25D366;
     color: #ffffff;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.5rem;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     transition: all var(--dur-base);
     z-index: 999;
+    text-decoration: none;
 }
 
-.scroll-to-top.visible {
-    display: flex;
+.whatsapp-button:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    background: #20BA5A;
 }
 
-.scroll-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+.whatsapp-button svg {
+    width: 28px;
+    height: 28px;
 }
 
 /* ==========================================

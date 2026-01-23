@@ -392,26 +392,12 @@ class ProjectsManager {
                 title: "Pichus Tandil",
                 description: "Proyecto de e-commerce especializado en la venta de ropa femenina (Proyecto Freelancer).",
                 tags: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
-                image: "assets/images/project1.svg", // Placeholder, user might want to change
+                image: "assets/images/project1.svg",
                 demoLink: "#",
-                codeLink: null // No code link for freelance/private projects usually
+                codeLink: null
             },
-            {
-                title: "Coder Market",
-                description: "Proyecto con generación de tickets de compra y un dashboard administrativo para gestionar productos.",
-                tags: ["React", "Firebase", "Sass", "JavaScript"],
-                image: "assets/images/project2.svg",
-                demoLink: "#",
-                codeLink: "#"
-            },
-            {
-                title: "Nos casamos",
-                description: "Página web para una pareja de Tandil, Argentina, creada especialmente para su boda.",
-                tags: ["HTML", "CSS", "JavaScript"],
-                image: "assets/images/project3.svg",
-                demoLink: "#",
-                codeLink: "#"
-            }
+
+
         ];
 
         this.init();
